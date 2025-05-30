@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.controller.BookingController"
+      spacing="10">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <TableView fx:id="tvBooking" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId"   text="ID"   prefWidth="50"/>
+            <TableColumn fx:id="colUser" text="User" prefWidth="100"/>
+            <TableColumn fx:id="colSlot" text="Slot" prefWidth="80"/>
+            <TableColumn fx:id="colTime" text="Time" prefWidth="150"/>
+        </columns>
+    </TableView>
+    <HBox spacing="10">
+        <Label text="Slot:"/>
+        <ComboBox fx:id="cbSlot"/>
+        <DatePicker fx:id="dpDate"/>
+        <Button fx:id="btnBook"     text="Book"/>
+        <Button fx:id="btnCancel"   text="Cancel"/>
+        <Button fx:id="btnTransfer" text="Transfer"/>
+    </HBox>
+</VBox>

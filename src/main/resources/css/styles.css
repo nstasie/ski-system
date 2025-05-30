@@ -1,0 +1,158 @@
+/* src/main/resources/css/styles.css */
+
+/* Root and basic font */
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-base: #f0f2f5;
+    -fx-background: #f0f2f5;
+}
+
+/* Labels */
+.label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 13px;
+}
+
+/* Welcome label */
+.welcome {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Buttons */
+.button {
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+    -fx-padding: 6 12 6 12;
+    -fx-font-size: 13px;
+}
+
+/* Primary action buttons */
+.button#btnLogin,
+.button#btnBook,
+.button#btnRent,
+.button#btnInsBook {
+    -fx-background-color: linear-gradient(to bottom, #4a90e2, #357ab7);
+    -fx-text-fill: white;
+}
+
+.button#btnLogin:hover,
+.button#btnBook:hover,
+.button#btnRent:hover,
+.button#btnInsBook:hover {
+    -fx-background-color: linear-gradient(to bottom, #5aa0f2, #468cd7);
+}
+
+/* Secondary buttons */
+.button#btnReg,
+.button#btnCancel,
+.button#btnReturn {
+    -fx-background-color: transparent;
+    -fx-border-color: #4a90e2;
+    -fx-border-width: 1;
+    -fx-text-fill: #4a90e2;
+}
+
+.button#btnReg:hover,
+.button#btnCancel:hover,
+.button#btnReturn:hover {
+    -fx-background-color: #e1f0ff;
+}
+
+/* Logout button */
+.button#btnLogout {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e74c3c;
+}
+
+.button#btnLogout:hover {
+    -fx-background-color: #fdecea;
+}
+
+/* Text fields and combo boxes */
+.text-field,
+.password-field,
+.combo-box,
+.date-picker,
+.spinner {
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-color: #cccccc;
+    -fx-padding: 4 6 4 6;
+    -fx-prompt-text-fill: #888888;
+}
+
+.text-field:focused,
+.password-field:focused,
+.combo-box:focused,
+.date-picker:focused,
+.spinner:focused {
+    -fx-border-color: #4a90e2;
+    -fx-effect: dropshadow(gaussian, rgba(74,144,226,0.3), 4, 0.0, 0, 0);
+}
+
+/* TableView styling */
+.table-view {
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: #e0e0e0;
+    -fx-padding: 8;
+}
+
+/* Table rows hover */
+.table-row-cell:hover {
+    -fx-background-color: #f5fafe;
+}
+
+/* Table column headers */
+.table-view .column-header-background {
+    -fx-background-color: #ffffff;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-size: 30px;
+    -fx-border-color: transparent transparent #e0e0e0 transparent;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Alerts */
+.dialog-pane {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ccc;
+}
+
+.dialog-pane .content.label {
+    -fx-text-fill: #333;
+}
+
+/* Error message label */
+.message {
+    -fx-text-fill: #e74c3c;
+    -fx-font-style: italic;
+    -fx-padding: 4 0 0 0;
+}
+
+/* Панель вкладок */
+.tab-pane {
+    -fx-background-color: #ffffff;
+}
+
+.tab-pane .tab-header-area {
+    -fx-background-color: #ffffff;
+}
+
+.tab-pane .tab {
+    -fx-background-insets: 0;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #e1f0ff;
+}
+
+/* Стрілки обертача */
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: transparent;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.controller.MainController"
+            stylesheets="@../css/styles.css">
+    <top>
+        <HBox spacing="20" alignment="CENTER_RIGHT">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <children>
+                <Label fx:id="lblWelcome" styleClass="welcome"/>
+                <Button fx:id="btnLogout" text="Logout"/>
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <TabPane fx:id="tabPane">
+            <Tab text="Dashboard" fx:id="tabDashboard">
+            </Tab>
+            <Tab text="Booking" fx:id="tabBooking">
+                <fx:include source="BookingView.fxml"/>
+            </Tab>
+            <Tab text="Equipment" fx:id="tabEquipment">
+                <fx:include source="EquipmentView.fxml"/>
+            </Tab>
+            <Tab text="Instructors" fx:id="tabInstructors">
+                <fx:include source="InstructorView.fxml"/>
+            </Tab>
+            <Tab text="Finance" fx:id="tabFinance"></Tab>
+
+            <Tab text="Analytics" fx:id="tabAnalytics"></Tab>
+
+        </TabPane>
+    </center>
+</BorderPane>

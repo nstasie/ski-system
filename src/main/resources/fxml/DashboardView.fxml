@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.controller.DashboardController"
+            fitToWidth="true">
+    <VBox spacing="15">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+
+        <!-- Welcome Section -->
+        <Label fx:id="lblWelcome" styleClass="welcome"/>
+
+        <!-- Quick Stats -->
+        <HBox spacing="20">
+            <VBox spacing="5" style="-fx-background-color: #e3f2fd; -fx-padding: 15; -fx-background-radius: 8;">
+                <Label text="Active Bookings" style="-fx-font-weight: bold;"/>
+                <Label fx:id="lblActiveBookings" style="-fx-font-size: 24px; -fx-text-fill: #1976d2;"/>
+            </VBox>
+            <VBox spacing="5" style="-fx-background-color: #e8f5e8; -fx-padding: 15; -fx-background-radius: 8;">
+                <Label text="Current Rentals" style="-fx-font-weight: bold;"/>
+                <Label fx:id="lblCurrentRentals" style="-fx-font-size: 24px; -fx-text-fill: #388e3c;"/>
+            </VBox>
+            <VBox spacing="5" style="-fx-background-color: #fff3e0; -fx-padding: 15; -fx-background-radius: 8;">
+                <Label text="Upcoming Lessons" style="-fx-font-weight: bold;"/>
+                <Label fx:id="lblUpcomingLessons" style="-fx-font-size: 24px; -fx-text-fill: #f57c00;"/>
+            </VBox>
+        </HBox>
+
+        <Separator/>
+
+        <!-- Current Active Items -->
+        <Label text="Current Activities" styleClass="welcome"/>
+
+        <!-- Active Bookings -->
+        <TitledPane text="My Active Bookings" expanded="true">
+            <TableView fx:id="tvActiveBookings" prefHeight="150">
+                <columns>
+                    <TableColumn fx:id="colBookingSlot" text="Time Slot" prefWidth="100"/>
+                    <TableColumn fx:id="colBookingDate" text="Date" prefWidth="120"/>
+                    <TableColumn fx:id="colBookingStatus" text="Status" prefWidth="80"/>
+                </columns>
+            </TableView>
+        </TitledPane>
+
+        <!-- Current Rentals -->
+        <TitledPane text="My Current Rentals" expanded="true">
+            <TableView fx:id="tvCurrentRentals" prefHeight="150">
+                <columns>
+                    <TableColumn fx:id="colRentalType" text="Equipment Type" prefWidth="120"/>
+                    <TableColumn fx:id="colRentalSize" text="Size" prefWidth="80"/>
+                    <TableColumn fx:id="colRentalSince" text="Rented Since" prefWidth="120"/>
+                </columns>
+            </TableView>
+        </TitledPane>
+
+        <!-- Recent Lessons -->
+        <TitledPane text="My Lessons" expanded="false">
+            <TableView fx:id="tvMyLessons" prefHeight="200">
+                <columns>
+                    <TableColumn fx:id="colLessonInstructor" text="Instructor" prefWidth="100"/>
+                    <TableColumn fx:id="colLessonTime" text="Date and Time" prefWidth="150"/>
+                    <TableColumn fx:id="colLessonStatus" text="Status" prefWidth="80"/>
+                </columns>
+            </TableView>
+        </TitledPane>
+
+        <!-- Recent Activity History -->
+        <TitledPane text="Recent Activity" expanded="false">
+            <TableView fx:id="tvRecentActivity" prefHeight="200">
+                <columns>
+                    <TableColumn fx:id="colActivityType" text="Activity" prefWidth="100"/>
+                    <TableColumn fx:id="colActivityDetails" text="Details" prefWidth="200"/>
+                    <TableColumn fx:id="colActivityTime" text="Date" prefWidth="120"/>
+                    <TableColumn fx:id="colActivityAmount" text="Amount" prefWidth="80"/>
+                </columns>
+            </TableView>
+        </TitledPane>
+
+    </VBox>
+</ScrollPane>

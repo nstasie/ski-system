@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.controller.EquipmentController"
+      spacing="15">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- My Current Rentals Section -->
+    <VBox spacing="5">
+        <Label text="My Current Rentals" styleClass="welcome"/>
+        <TableView fx:id="tvMyRentals" prefHeight="150">
+            <columns>
+                <TableColumn fx:id="colMyType" text="Type" prefWidth="100"/>
+                <TableColumn fx:id="colMySize" text="Size" prefWidth="80"/>
+                <TableColumn fx:id="colMyStatus" text="Status" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+    <Separator/>
+
+    <!-- Available Equipment Section -->
+    <VBox spacing="5">
+        <Label text="Available Equipment" styleClass="welcome"/>
+        <TableView fx:id="tvEquip" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="colType" text="Type" prefWidth="100"/>
+                <TableColumn fx:id="colSize" text="Size" prefWidth="80"/>
+                <TableColumn fx:id="colAvail" text="Available" prefWidth="80"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+    <!-- Rental Controls -->
+    <VBox spacing="10">
+        <Label text="Rent Equipment" styleClass="welcome"/>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Type:"/>
+            <ComboBox fx:id="cbType" prefWidth="120"/>
+            <Label text="Size:"/>
+            <ComboBox fx:id="cbSize" prefWidth="80"/>
+            <Button fx:id="btnRent" text="Rent" prefWidth="60"/>
+        </HBox>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Return Equipment:"/>
+            <ComboBox fx:id="cbMyRentals" prefWidth="200"/>
+            <Button fx:id="btnReturn" text="Return" prefWidth="60"/>
+        </HBox>
+    </VBox>
+</VBox>

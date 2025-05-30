@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.controller.InstructorController"
+      spacing="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- Instructor Workload Section -->
+    <Label text="Instructor Workload" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+    <TableView fx:id="tvInstructorWorkload" prefHeight="150">
+        <columns>
+            <TableColumn fx:id="colInstructorName" text="Instructor" prefWidth="120"/>
+            <TableColumn fx:id="colTotalLessons" text="Total Lessons" prefWidth="100"/>
+            <TableColumn fx:id="colTodayLessons" text="Today's Lessons" prefWidth="120"/>
+            <TableColumn fx:id="colWeekLessons" text="This Week" prefWidth="100"/>
+            <TableColumn fx:id="colStatus" text="Status" prefWidth="80"/>
+        </columns>
+    </TableView>
+
+    <Separator/>
+
+    <!-- My Lessons Section -->
+    <Label text="Lessons Schedule" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+    <TableView fx:id="tvLessons" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId"    text="ID"    prefWidth="50"/>
+            <TableColumn fx:id="colUser"  text="User"  prefWidth="100"/>
+            <TableColumn fx:id="colInstr" text="Instructor" prefWidth="100"/>
+            <TableColumn fx:id="colTime"  text="Date and Time"  prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <!-- Booking Section -->
+    <Label text="Book a Lesson" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+    <HBox spacing="10">
+        <Label text="Instructor:"/>
+        <ComboBox fx:id="cbInstructor" prefWidth="120"/>
+        <Label text="Date:"/>
+        <DatePicker fx:id="dpInsDate"/>
+        <Label text="Hour:"/>
+        <Spinner fx:id="spHour" prefWidth="80"/>
+        <Button fx:id="btnInsBook" text="Book Lesson"/>
+    </HBox>
+</VBox>
